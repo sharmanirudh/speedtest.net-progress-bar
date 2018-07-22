@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#141526">
+    android:background="@color/colorBackground">
 
     <RelativeLayout
         android:scaleX="0.7"
@@ -16,45 +16,46 @@
         android:layout_height="360dp">
 
         <ImageView
+            android:scaleY="1.056"
+            android:scaleX="1.056"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/gauge_keyhole_upload"/>
+            android:src="@drawable/gauge_keyhole_18"/>
 
         <View
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:background="#141526" />
+            android:background="@color/colorBackground" />
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#141526" />
+            android:background="@color/colorBackground" />
         <View
             android:layout_alignParentEnd="true"
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:background="#141526" />
+            android:background="@color/colorBackground" />
         <View
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#141526" />
+            android:background="@color/colorBackground" />
 
         <com.dinuscxj.progressbar.CircleProgressBar
             android:id="@+id/my_cpb"
-            android:scaleY="-1"
+            android:rotation="-131"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
             app:style="solid"
 
-            app:background_color="@color/colorTransparent"
-
             app:progress_stroke_width="10dp"
-            app:progress_start_color="@color/colorCircularProgressBarBackground"
-            app:progress_end_color="@color/colorCircularProgressBarBackground"
-            app:progress_background_color="@color/colorTransparent"
+            app:drawBackgroundOutsideProgress="true"
+            app:progress_background_color="@color/colorCircularProgressBarBackground"
+            app:progress_start_color="@color/colorTransparent"
+            app:progress_end_color="@color/colorTransparent"
 
             app:progress_shader="sweep"
 
@@ -62,20 +63,19 @@
 
         <com.dinuscxj.progressbar.CircleProgressBar
             android:id="@+id/my_cpb_shadow_hide"
-            android:scaleY="-1"
-            android:layout_margin="26dp"
+            android:rotation="-131"
+            android:layout_margin="32dp"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
             app:style="solid"
 
-            app:background_color="@color/colorTransparent"
-
             app:progress_stroke_width="10dp"
-            app:progress_start_color="#141526"
-            app:progress_end_color="#141526"
-            app:progress_background_color="@color/colorTransparent"
+            app:drawBackgroundOutsideProgress="true"
+            app:progress_background_color="@color/colorBackground"
+            app:progress_start_color="@color/colorTransparent"
+            app:progress_end_color="@color/colorTransparent"
 
             app:progress_shader="sweep"
 
@@ -85,9 +85,11 @@
             android:layout_margin="0.8dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_cpb_circular_window_background"/>
+            android:src="@drawable/ic_gauge_keyhole_window"/>
 
         <ImageView
+            android:scaleY="0.9"
+            android:scaleX="0.9"
             android:rotation="131"
             android:id="@+id/imageViewNeedle"
             android:layout_centerInParent="true"
@@ -97,8 +99,8 @@
 
         <TextView
             android:id="@+id/textView0CPB"
-            android:layout_marginTop="251dp"
-            android:layout_marginStart="73dp"
+            android:layout_marginTop="252dp"
+            android:layout_marginStart="76dp"
             android:layout_width="70dp"
             android:layout_height="28dp"
             android:text="0"
@@ -109,11 +111,11 @@
             android:textColor="@color/colorNotActiveGaugeText"/>
         <TextView
             android:id="@+id/textView20CPB"
-            android:layout_marginTop="191dp"
-            android:layout_marginStart="45dp"
+            android:layout_marginTop="188dp"
+            android:layout_marginStart="46dp"
             android:layout_width="70dp"
             android:layout_height="28dp"
-            android:text="20"
+            android:text="15"
             android:textAlignment="textStart"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -121,8 +123,8 @@
             android:textColor="@color/colorNotActiveGaugeText"/>
         <TextView
             android:id="@+id/textView30CPB"
-            android:layout_marginTop="115dp"
-            android:layout_marginStart="53dp"
+            android:layout_marginTop="118dp"
+            android:layout_marginStart="56dp"
             android:layout_width="70dp"
             android:layout_height="28dp"
             android:text="30"
@@ -133,11 +135,11 @@
             android:textColor="@color/colorNotActiveGaugeText"/>
         <TextView
             android:id="@+id/textView50CPB"
-            android:layout_marginTop="62dp"
-            android:layout_marginStart="98dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginStart="101dp"
             android:layout_width="70dp"
             android:layout_height="28dp"
-            android:text="50"
+            android:text="45"
             android:textAlignment="textStart"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -145,7 +147,7 @@
             android:textColor="@color/colorNotActiveGaugeText"/>
         <TextView
             android:id="@+id/textView60CPB"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="40dp"
             android:layout_marginStart="145dp"
             android:layout_width="70dp"
             android:layout_height="28dp"
@@ -158,11 +160,11 @@
         <TextView
             android:id="@+id/textView70CPB"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="62dp"
-            android:layout_marginEnd="98dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="101dp"
             android:layout_width="70dp"
             android:layout_height="28dp"
-            android:text="70"
+            android:text="75"
             android:textAlignment="textEnd"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -171,8 +173,8 @@
         <TextView
             android:id="@+id/textView90CPB"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="115dp"
-            android:layout_marginEnd="53dp"
+            android:layout_marginTop="118dp"
+            android:layout_marginEnd="56dp"
             android:layout_width="80dp"
             android:layout_height="28dp"
             android:text="90"
@@ -184,11 +186,11 @@
         <TextView
             android:id="@+id/textView100CPB"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="191dp"
-            android:layout_marginEnd="45dp"
+            android:layout_marginTop="188dp"
+            android:layout_marginEnd="46dp"
             android:layout_width="70dp"
             android:layout_height="28dp"
-            android:text="100"
+            android:text="105"
             android:textAlignment="textEnd"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -197,8 +199,8 @@
         <TextView
             android:id="@+id/textView120CPB"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="251dp"
-            android:layout_marginEnd="73dp"
+            android:layout_marginTop="254dp"
+            android:layout_marginEnd="76dp"
             android:layout_width="70dp"
             android:layout_height="28dp"
             android:text="120"

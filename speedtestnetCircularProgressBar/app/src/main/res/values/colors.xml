@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="colorBackground">#141526</color>
     <color name="colorTransparent">#00ffffff</color>
     <color name="colorCircularProgressBarBackground">#232f4e</color>
     <color name="colorActiveGaugeText">#ffffff</color>

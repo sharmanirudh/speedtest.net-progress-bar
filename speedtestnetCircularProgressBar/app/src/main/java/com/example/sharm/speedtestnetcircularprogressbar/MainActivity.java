@@ -35,31 +35,33 @@ public class MainActivity extends AppCompatActivity {
         textViewCPBLabels[8] = findViewById(R.id.textView120CPB);
         mCircleProgressBar = findViewById(R.id.my_cpb);
         mCircleProgressBarShadowHide = findViewById(R.id.my_cpb_shadow_hide);
-        mCircleProgressBar.setProgress(87);
-        mCircleProgressBarShadowHide.setProgress(87);
+        mCircleProgressBar.setMax(165);
+        mCircleProgressBarShadowHide.setMax(165);
+//        mCircleProgressBar.setProgress(90);
+//        mCircleProgressBarShadowHide.setProgress(90);
+//        imageViewNeedle.setRotation((float) (2.19166667*90) );
 //        mCircleProgressBar.setProgressFormatter(new CircleProgressBar.ProgressFormatter() {
 //            @Override
 //            public CharSequence format(int progress, int max) {
 //                return String.format(DEFAULT_PATTERN, (int) ((float) progress / (float) max * 100));
 //            }
 //        });
-        ValueAnimator animator = ValueAnimator.ofInt( (int)gaugeToCodeValue(0), (int)gaugeToCodeValue(120) );
+        ValueAnimator animator = ValueAnimator.ofInt(0, 121);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 int progress = (int) animation.getAnimatedValue();
                 mCircleProgressBar.setProgress(progress);
                 mCircleProgressBarShadowHide.setProgress(progress);
-                double progressGaugeEquivalent = codeToGaugeValue(progress);
-                imageViewNeedle.setRotation((float) (2.18333333*progressGaugeEquivalent) );
-                textViewCurrentDbCPB.setText(String.format("%.2f", progressGaugeEquivalent));
+                imageViewNeedle.setRotation((float) (2.19166667*progress) );
+                textViewCurrentDbCPB.setText(String.format("%d", progress));
                 for (int i = 0; i < 9; i++) {
-                    if (textViewCPBLabelValues[i] < (int)progressGaugeEquivalent)
+                    if (textViewCPBLabelValues[i] < progress)
                         textViewCPBLabels[i].setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorActiveGaugeText));
                     else
                         textViewCPBLabels[i].setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorNotActiveGaugeText));
                 }
-                System.out.println("Rotation progress: "+(float) (2.18333333*codeToGaugeValue(progress)));
+                System.out.println("Rotation progress: "+(float) (2.19166667*codeToGaugeValue(progress)));
             }
         });
         animator.setRepeatCount(ValueAnimator.INFINITE);

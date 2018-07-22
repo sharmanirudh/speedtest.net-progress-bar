@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.dinuscxj.progressbar.CircleProgressBar
+        android:id="@+id/my_cpb"
+        android:scaleY="-1"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:style="solid"
+
+        app:progress_stroke_width="10dp"
+        app:drawBackgroundOutsideProgress="true"
+        app:progress_background_color="@color/colorCircularProgressBarBackground"
+        app:progress_start_color="@color/colorTransparent"
+        app:progress_end_color="@color/colorTransparent"
+
+        app:progress_shader="sweep"
+
+        app:progress_stroke_cap="square" />
+
+    <com.dinuscxj.progressbar.CircleProgressBar
+        android:id="@+id/my_cpb_shadow_hide"
+        android:scaleY="-1"
+        android:layout_margin="32dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:style="solid"
+
+        app:progress_stroke_width="10dp"
+        app:drawBackgroundOutsideProgress="true"
+        app:progress_background_color="@color/colorBackground"
+        app:progress_start_color="@color/colorTransparent"
+        app:progress_end_color="@color/colorTransparent"
+
+        app:progress_shader="sweep"
+
+        app:progress_stroke_cap="square" />
+
+</android.support.constraint.ConstraintLayout>
